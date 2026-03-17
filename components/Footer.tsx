@@ -52,7 +52,7 @@ export default function Footer() {
                 alt="Rooted Ridge Studio"
                 width={375}
                 height={225}
-                style={{ height: '46px', width: 'auto', display: 'block' }}
+                style={{ height: '62px', width: 'auto', display: 'block' }}
               />
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-4">
