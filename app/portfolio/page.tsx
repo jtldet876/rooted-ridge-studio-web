@@ -44,6 +44,24 @@ const projects = [
     accent: 'brand-orange',
     accentHex: '#E07B28',
   },
+  {
+    id: 'bratton-ryan-dental',
+    name: 'Bratton Ryan Dental',
+    url: 'bratton-ryan-dental.vercel.app',
+    specialty: 'Dental Practice · General & Cosmetic Dentistry',
+    headline: 'A clean, trustworthy website built to attract and convert new dental patients',
+    description:
+      'Bratton Ryan Dental needed a modern, professional web presence that would instill immediate confidence in prospective patients. We built a fast, mobile-first site with clear service pages, a streamlined appointment flow, and local SEO targeting to drive new patient inquiries.',
+    image: '/portfolio-bratton-ryan-dental.png',
+    tags: ['Dental Practice', 'General Dentistry', 'Cosmetic Dentistry', 'Web Design', 'Local SEO', 'Mobile-First'],
+    results: [
+      { metric: '↑ 3×', label: 'New Patient Inquiries' },
+      { metric: '#1', label: 'Local Search' },
+      { metric: '98', label: 'Mobile Score' },
+    ],
+    accent: 'brand-teal',
+    accentHex: '#1A5C54',
+  },
 ]
 
 const specialties = [
