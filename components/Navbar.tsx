@@ -38,7 +38,7 @@ export default function Navbar() {
             alt="Rooted Ridge Studio"
             width={375}
             height={225}
-            style={{ height: '68px', width: 'auto', display: 'block' }}
+            style={{ height: '82px', width: 'auto', display: 'block' }}
             priority
           />
         </a>
