@@ -55,7 +55,9 @@ export default function Navbar() {
             </a>
           ))}
           <motion.a
-            href="/#contact"
+            href="https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-brand-orange hover:bg-brand-orange-light text-white text-sm font-semibold px-5 py-2.5 tracking-wide transition-colors duration-200"
             style={{ borderRadius: '2px' }}
             whileHover={{ scale: 1.03, y: -1 }}
@@ -111,7 +113,9 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/#contact"
+                href="https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="mt-3 bg-brand-orange text-white font-semibold text-sm px-5 py-3.5 text-center tracking-wide"
                 style={{ borderRadius: '2px' }}

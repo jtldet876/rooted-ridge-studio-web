@@ -211,7 +211,9 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         </div>
 
         <motion.a
-          href="/#contact"
+          href="https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-white font-semibold text-sm px-6 py-3 border border-white/20 hover:border-brand-teal-light hover:text-brand-teal-light transition-all duration-200"
           style={{ borderRadius: '2px' }}
           whileHover={{ scale: 1.02, y: -1 }}
@@ -284,7 +286,9 @@ export default function PortfolioPage() {
             </motion.p>
 
             <motion.a
-              href="/#contact"
+              href="https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-8 py-4 text-sm tracking-wide transition-colors duration-200"
               style={{ borderRadius: '2px' }}
               initial={{ opacity: 0, y: 16 }}
@@ -401,7 +405,9 @@ export default function PortfolioPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
-                  href="/#contact"
+                  href="https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-8 py-4 text-sm tracking-wide transition-colors duration-200"
                   style={{ borderRadius: '2px' }}
                   whileHover={{ scale: 1.02, y: -2 }}
