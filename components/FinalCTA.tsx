@@ -113,7 +113,7 @@ export default function FinalCTA() {
                 Book Your Free Strategy Call
               </h3>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.open('https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w', '_blank') }}>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase mb-1.5">
