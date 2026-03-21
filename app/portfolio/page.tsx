@@ -45,15 +45,15 @@ const projects = [
     accentHex: '#E07B28',
   },
   {
-    id: 'pt1-fitness',
-    name: 'PT1 Fitness',
-    url: 'pt1fitness.com',
+    id: 'iron-core-fitness',
+    name: 'Iron Core Fitness',
+    url: 'ironcorefitness.com',
     specialty: 'Personal Training · Strength & Conditioning',
     headline: 'A results-driven website built to convert visitors into personal training clients',
     description:
-      'PT1 Fitness needed a bold, high-energy web presence that showcased real client transformations and turned website visitors into booked consultations. We built a conversion-focused site with a compelling hero, before-and-after results, flexible pricing packages, and an integrated contact flow to generate consistent leads.',
+      'Iron Core Fitness needed a bold, high-energy web presence that showcased real client transformations and turned website visitors into booked consultations. We built a conversion-focused site with a compelling hero, before-and-after results, flexible pricing packages, and an integrated contact flow to generate consistent leads.',
     image: '/portfolio-pt1.png',
-    tags: ['Personal Training', 'Strength & Conditioning', 'Lead Generation', 'Before & After Results', 'Pricing Packages', 'Mobile-First'],
+    tags: ['Personal Training', 'Strength & Conditioning', 'Lead Generation', 'Before & After', 'Pricing Packages', 'Mobile-First'],
     results: [
       { metric: '↑ 3×', label: 'Consultation Bookings' },
       { metric: '#1', label: 'Local Search' },
