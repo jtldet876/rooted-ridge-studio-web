@@ -310,9 +310,9 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
             >
               {[
-                { value: '50+', label: 'Health Pros Served' },
-                { value: '3×', label: 'Avg Traffic Increase' },
-                { value: '4.9★', label: 'Client Rating' },
+                { value: '15+', label: 'Yrs Behavioral Health' },
+                { value: 'B.S.', label: 'Psychology + NASM Certified' },
+                { value: 'Local', label: 'Queen Creek, AZ' },
               ].map((stat, i) => (
                 <div key={stat.label} className="flex items-center gap-3">
                   <span className="font-display text-2xl font-bold text-brand-teal-light">{stat.value}</span>
