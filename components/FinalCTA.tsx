@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const checkpoints = [
@@ -9,6 +10,23 @@ const checkpoints = [
 ]
 
 export default function FinalCTA() {
+  const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setSubmitting(true)
+    const form = e.currentTarget
+    await fetch('https://formspree.io/f/myknanjr', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    })
+    setSubmitting(false)
+    setSubmitted(true)
+    window.open('https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w', '_blank')
+  }
+
   return (
     <section id="contact" className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
@@ -113,7 +131,7 @@ export default function FinalCTA() {
                 Book Your Free Strategy Call
               </h3>
 
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.open('https://tidycal.com/1yn5jw3/30-minute-meeting-3el8d2w', '_blank') }}>
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase mb-1.5">
@@ -121,6 +139,7 @@ export default function FinalCTA() {
                     </label>
                     <input
                       type="text"
+                      name="first_name"
                       placeholder="Sarah"
                       className="w-full bg-white/[0.05] border border-white/10 focus:border-brand-teal-light text-white text-sm placeholder-white/20 px-4 py-3 outline-none transition-colors duration-200"
                       style={{ borderRadius: '2px' }}
@@ -132,6 +151,7 @@ export default function FinalCTA() {
                     </label>
                     <input
                       type="text"
+                      name="last_name"
                       placeholder="Chen"
                       className="w-full bg-white/[0.05] border border-white/10 focus:border-brand-teal-light text-white text-sm placeholder-white/20 px-4 py-3 outline-none transition-colors duration-200"
                       style={{ borderRadius: '2px' }}
@@ -145,6 +165,7 @@ export default function FinalCTA() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="sarah@mypractice.com"
                     className="w-full bg-white/[0.05] border border-white/10 focus:border-brand-teal-light text-white text-sm placeholder-white/20 px-4 py-3 outline-none transition-colors duration-200"
                     style={{ borderRadius: '2px' }}
@@ -156,6 +177,7 @@ export default function FinalCTA() {
                     Your Specialty
                   </label>
                   <select
+                    name="specialty"
                     className="w-full bg-white/[0.05] border border-white/10 focus:border-brand-teal-light text-white/80 text-sm px-4 py-3 outline-none transition-colors duration-200 appearance-none cursor-pointer"
                     style={{ borderRadius: '2px' }}
                   >
@@ -176,6 +198,7 @@ export default function FinalCTA() {
                   </label>
                   <textarea
                     rows={3}
+                    name="biggest_challenge"
                     placeholder="Tell us your biggest challenge with your online presence…"
                     className="w-full bg-white/[0.05] border border-white/10 focus:border-brand-teal-light text-white text-sm placeholder-white/20 px-4 py-3 outline-none transition-colors duration-200 resize-none"
                     style={{ borderRadius: '2px' }}
@@ -184,12 +207,13 @@ export default function FinalCTA() {
 
                 <motion.button
                   type="submit"
-                  className="w-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold py-4 text-sm tracking-wide transition-colors duration-200 mt-1"
+                  disabled={submitting || submitted}
+                  className="w-full bg-brand-orange hover:bg-brand-orange-light disabled:opacity-60 text-white font-semibold py-4 text-sm tracking-wide transition-colors duration-200 mt-1"
                   style={{ borderRadius: '2px' }}
-                  whileHover={{ scale: 1.01, y: -1 }}
+                  whileHover={{ scale: submitting || submitted ? 1 : 1.01, y: submitting || submitted ? 0 : -1 }}
                   whileTap={{ scale: 0.99 }}
                 >
-                  Book My Free Strategy Call →
+                  {submitted ? 'Sent! Opening your booking link…' : submitting ? 'Sending…' : 'Book My Free Strategy Call →'}
                 </motion.button>
 
                 <p className="text-white/25 text-xs text-center pt-1">
